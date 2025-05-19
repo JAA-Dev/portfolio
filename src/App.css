@@ -33,9 +33,30 @@ body{
         max-xl:bg-yellow-500 
         max-2xl:bg-red-500
     }
+
     .Loading {
       @apply fixed inset-0 z-50 bg-transparent flex flex-col items-center justify-center
     }
+    .loading-container {
+      @apply flex flex-col items-center
+    }
+    .loading-text {
+      @apply mb-4 text-4xl font-bold
+    }
+    .loading-type {
+      @apply animate-blink ml-1
+    }
+    .loading-bar {
+      @apply w-[200px] h-[2px] rounded relative overflow-hidden bg-blue-100/20
+    }
+
+    .bg-gradient {
+      @apply h-screen w-full;
+      background-image: 
+        linear-gradient(to bottom, transparent 50%, #2d3d33),
+        linear-gradient(to right, #a2a74d, #53a36b);
+    }
+
 }
 
 @utility flex-center {
@@ -44,6 +65,20 @@ body{
 
 
 @layer utilities {
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  .animate-blink {
+    animation: blink 0.8s step-end infinite;
+  }
+
   @keyframes loading {
     0% {
       transform: translateX(-100%);

@@ -1,21 +1,21 @@
 import { useState } from 'react';
 import './App.css';
-import Home from './components/section/Home';
 import { LoadingScreen } from './components/LoadingScreen';
+import { Navbar } from './components/Navbar';
+import { MobileMenu } from './components/MobileMenu';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
 
   return (
     <>
-      {!isLoaded ? (
-        <LoadingScreen onComplete={() => setIsLoaded(true)} />
-      ) : (
-        <>
-          <h1 className="text-center text-6xl">Hello JAADev</h1>
-          <Home />
-        </>
-      )}
+      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
+      <div className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"} bg-gradient`}>
+          <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+          <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+      </div>
     </>
   );
 }
