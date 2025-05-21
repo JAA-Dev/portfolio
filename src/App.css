@@ -44,7 +44,7 @@ body{
       @apply mb-4 text-4xl font-bold
     }
     .loading-type {
-      @apply animate-blink ml-1
+      /* @apply animate-blink ml-1 */
     }
     .loading-bar {
       @apply w-[200px] h-[2px] rounded relative overflow-hidden bg-blue-100/20
