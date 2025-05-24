@@ -6,6 +6,8 @@ body{
   font-family: "Roboto", sans-serif;
   background-color: #233831;
   color: #8FDCC2;
+  scroll-behavior: smooth;
+  /* overflow: hidden; */
 }
 
 @theme {
