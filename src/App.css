@@ -93,4 +93,36 @@ body{
   .animate-loading-bar {
     animation: loading 0.8s ease infinite;
   }
+
+  .footer-section {
+      @apply p-6 mt-10
+    }
+    .footer-container {
+      @apply max-w-6xl mx-auto
+    }
+    .footer-logoNav {
+      @apply flex justify-between items-center flex-wrap
+    }
+    .footer-logoNavh1 {
+      @apply text-lg font-semibold
+    }
+    .footer-nav {
+      @apply flex space-x-6 text-sm
+    }
+    .footer-a {
+      @apply hover:text-[#D4EDE4] transition-colors
+    }
+    .footer-hr {
+      @apply my-4 border-green-200
+    }
+    .footer-bottom {
+      @apply flex max-sm:flex-col justify-between items-center flex-wrap
+    }
+    .footer-p {
+      @apply text-sm max-sm:mb-2.5
+    }
+    .footer-container-logo {
+      @apply flex space-x-4 text-2xl max-sm:mb-2.5
+    }
+  
 }

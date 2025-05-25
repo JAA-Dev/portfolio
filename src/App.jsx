@@ -6,6 +6,7 @@ import { MobileMenu } from './components/MobileMenu';
 import { Home } from './components/section/Home'
 import { About } from './components/section/About'
 import { Project } from './components/section/Project'
+import { Footer } from './components/section/Footer'
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -21,6 +22,7 @@ function App() {
           <Home />
           <About />
           <Project />
+          <Footer />
       </div>
     </>
   );
