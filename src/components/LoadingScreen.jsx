@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export const LoadingScreen = ({onComplete}) => {
   const [text, setText] = useState('');
-  const fullText = 'JAADev';
+  const fullText = `JAADev`;
 
   useEffect(() => {
     let index = 0;
@@ -28,9 +28,9 @@ export const LoadingScreen = ({onComplete}) => {
         {text}
         <span className="animate-blink ml-1">|</span>
       </div>
-      <div className="w-[200px] h-[2px] rounded relative overflow-hidden bg-blue-100/20">
+      {/* <div className="w-[200px] h-[2px] rounded relative overflow-hidden bg-blue-100/20">
         <div className="w-[40%] h-full shadow-[0_0_15px_#3b82f6] animate-loading-bar bg-blue-500" />
-      </div>
+      </div> */}
     </div>
   );
 };

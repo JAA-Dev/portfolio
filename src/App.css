@@ -1,18 +1,32 @@
 @import "tailwindcss";
 
+*{
+  scroll-behavior: smooth;
+}
 body{
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
-  background-color: #233831;
-  color: #8FDCC2;
-  scroll-behavior: smooth;
+  font-family: "mono", sans-serif;
+  /* background-color: #e7eaf1; */
+  /* background-color: #383838; */
+  /* background-color: #0a0a0a;*/ /*dark*/
+  background: #f5f5f5; 
+  /*lmode*/
+  /* color: #e7eaf1; */
+  color: #0a0a0a;
+  /*lmode*/
+  /* color: #f3f3f3; dmode */
   /* overflow: hidden; */
 }
 
 @theme {
     --color-chestnut: #973F29;
     /*pwede rin mga font and bg etc*/
+    --primary-accent: #13213C;
+    --primary-base: #030303;
+    --secondary-palette: #FDFDFD;
+    --secondary-palette1: #E5E5E5;
+    --secondary-accent: #FCA311;
 }
 
 @layer base {
@@ -22,12 +36,19 @@ body{
     p {
         /* @apply text-center */
     }
+    /* *{
+      @apply bg-[#f5f5f5] dark:bg-[#0a0a0a]
+    } */
 }
 
 @layer components {
     .dark {
-        @apply bg-white dark:bg-black text-black dark:text-white
+        @apply bg-[#f5f5f5] text-[#0a0a0a] dark:bg-[#0a0a0a] dark:text-[#f3f3f3]
     }
+    .section-wrapper {
+      @apply bg-[#f5f5f5] text-[#0a0a0a] dark:bg-[#0a0a0a] dark:text-[#f3f3f3];
+    }
+
     .responsive-color {
         @apply max-sm:bg-amber-500
         max-md:bg-cyan-500 
@@ -58,6 +79,7 @@ body{
         linear-gradient(to bottom, transparent 50%, #2d3d33),
         linear-gradient(to right, #a2a74d, #53a36b);
     }
+
 
 }
 
@@ -93,36 +115,44 @@ body{
   .animate-loading-bar {
     animation: loading 0.8s ease infinite;
   }
+  .font-color {
+    @apply text-blue-600
+  }
+  /* [#5e9343] */
+  .font-hover {
+    @apply hover:text-blue-600 transition-colors
+  }
 
-  .footer-section {
-      @apply p-6 mt-10
-    }
-    .footer-container {
-      @apply max-w-6xl mx-auto
-    }
-    .footer-logoNav {
-      @apply flex justify-between items-center flex-wrap
-    }
-    .footer-logoNavh1 {
-      @apply text-lg font-semibold
-    }
-    .footer-nav {
-      @apply flex space-x-6 text-sm
-    }
-    .footer-a {
-      @apply hover:text-[#D4EDE4] transition-colors
-    }
-    .footer-hr {
-      @apply my-4 border-green-200
-    }
-    .footer-bottom {
-      @apply flex max-sm:flex-col justify-between items-center flex-wrap
-    }
-    .footer-p {
-      @apply text-sm max-sm:mb-2.5
-    }
-    .footer-container-logo {
-      @apply flex space-x-4 text-2xl max-sm:mb-2.5
-    }
+  .p-second {
+    @apply text-[#8e8e8e]
+  }
+  .footer-a {
+    @apply hover:text-blue-600 transition-colors
+  }
+
+  .glass {
+    @apply flex flex-col md:flex-row gap-6 w-full items-center
+     rounded-xl p-6 dark:bg-[#262626] bg-[#fafafa]
+    border-white/5 border shadow-md dark:text-[#f3f3f3] text-[#0a0a0a]
+  }
+  .card {
+    @apply flex flex-col-reverse md:flex-row items-center rounded-xl p-5  dark:bg-[#262626] bg-[#fafafa]
+    border-white/5 border shadow-md dark:text-[#f3f3f3] text-[#0a0a0a]
+     /* bg-[#f5f5f5]/90 border-white/10 border */
+  }
+  .share-icon{
+    @apply w-4 h-4 mt-1.5 dark:filter dark:invert
+  }
+  .logos {
+    @apply w-full h-full object-cover group-hover:blur-md transition-all duration-500 ease-in-out
+  }
+  .logos-text {
+    @apply absolute inset-0  bg-black/10  opacity-0 group-hover:opacity-50
+               flex items-center justify-center transition-opacity duration-500
+  }
+  .logos-span {
+    @apply dark:text-[#f3f3f3] text-[#0a0a0a]
+  }
+
   
 }
