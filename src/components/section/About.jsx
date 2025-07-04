@@ -22,8 +22,7 @@ import PythonLogo from "../logos/icons8-python-80.png";
 import CpanelLogo from "../logos/icons8-cpanel-80.png";
 import VSCodeLogo from "../logos/icons8-vs-code-80.png";
 
-import { motion } from "framer-motion";
-import { fadeIn } from "../../variants";
+import RevealOnScroll from "../RevealOnScroll";
 
 export const About = () => {
   const techLogos = [
@@ -33,7 +32,7 @@ export const About = () => {
     { src: JSLogo, label: "JavaScript" },
     { src: ReactLogo, label: "React" },
     { src: JCLogo, label: "jQuery" },
-    { src: NodeLogo, label: "Node.js" },
+    // { src: NodeLogo, label: "Node.js" },
     { src: JavaLogo, label: "Java" },
     { src: PythonLogo, label: "Python" },
     { src: CLogo, label: "C++" },
@@ -70,39 +69,24 @@ export const About = () => {
       id="about"
       className="min-h-screen flex flex-col items-center justify-center py-20"
     >
+      <RevealOnScroll>
       <div className="max-w-3xl mx-auto px-4">
-        <motion.h2
-          variants={fadeIn("down", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
-          className="text-4xl md:text-7xl font-bold mb-9 text-center "
-        >
+        <h2 className="text-4xl md:text-7xl font-bold mb-9 text-center ">
           About Me.
-        </motion.h2>
+        </h2>
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-          <motion.div
-            variants={fadeIn("right", 0.1)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.5 }}
-            className="card rounded-xl overflow-hidden backdrop-blur-md p-8 border-white/10 border hover:-translate-y-5 hover:rotate-3 hover:scale-105 transition-all duration-100"
+          <div
+            className="card rounded-xl overflow-hidden backdrop-blur-md p-8 border-white/10
+             border hover:-translate-y-5 hover:rotate-3 hover:scale-105 transition-all duration-100"
           >
             <img
               src={MyPhoto}
               alt="Profile"
               className="w-100 h-100 md:w-800 md:h-80 "
             />
-            {/* <img src={MyPhoto} alt="Profile" className="w-90 h-100 md:w-550 md:h-80 blur-xs hover:blur-none transition-all duration-300" /> */}
-          </motion.div>
+          </div>
           {/* <div className="rounded-xl p-8 border-white/10 border"> */}
-          <motion.div
-            variants={fadeIn("left", 0.1)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.5 }}
-            className=""
-          >
+          <div>
             <p className="text-xl">
               {/* I am a fresh graduate with a strong passion for web development, eager to
                grow and continuously learn in both frontend and backend technologies. I enjoy building user-friendly
@@ -116,69 +100,43 @@ export const About = () => {
               in HTML, CSS, JavaScript, and modern frontend frameworks. I'm
               eager to learn, grow, and contribute to real-world projects.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
+      </RevealOnScroll>
       {/* <div className="max-w-3xl mx-auto px-4 py-15">
         <h2 className="text-4xl md:text-7xl font-bold mb-9 text-center ">
           Work Experience.
         </h2>
         
       </div> */}
+      <RevealOnScroll>
       <div className="max-w-3xl mx-auto mt-8 px-4 py-15">
-        <motion.h2
-          variants={fadeIn("right", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
-          className="text-4xl md:text-7xl font-bold mb-9 text-center "
-        >
+        <h2 className="text-4xl md:text-7xl font-bold mb-9 text-center ">
           Skills.
-        </motion.h2>
-        <motion.h2
-          variants={fadeIn("right", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
-          className="text-sm md:text-lg  mb-9"
-        >
+        </h2>
+        <h2 className="text-sm md:text-lg  mb-9">
           Techologies and Tools
-        </motion.h2>
+        </h2>
         <div className="grid grid-cols-3  md:grid-cols-4 lg:grid-cols-6 gap-4">
           {techLogos.map((tech, index) => (
-            <motion.div
-              variants={fadeIn("left", 0.2)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.5 }}
-              key={index}
-              className="card relative group overflow-hidden"
-            >
+            <div key={index} className="card relative group overflow-hidden">
               <img src={tech.src} alt={tech.label} className="logos" />
               <div className="logos-text">
                 <span className="logos-span">{tech.label}</span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
+      </RevealOnScroll>
+
+      <RevealOnScroll>
       <div className="max-w-3xl mx-auto px-4 py-15">
-        <motion.h2
-          variants={fadeIn("up", 0.1)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
-          className="text-4xl md:text-7xl font-bold mb-9 text-center "
-        >
+        <h2 className="text-4xl md:text-7xl font-bold mb-9 text-center ">
           Education.
-        </motion.h2>
-        <motion.div
-          variants={fadeIn("left", 0.1)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
-          className="flex flex-col items-center justify-between gap-10"
-        >
+        </h2>
+        <div className="flex flex-col items-center justify-between gap-10">
           <div className="card">
             {/* hover:translate-y-1 transition-all text-[#383838] */}
             <div className="w-sm max-sm:text-center md:w-2xl">
@@ -210,22 +168,30 @@ export const About = () => {
               className="w-30 h-30 max-sm:mb-5 rounded-full"
             />
           </div>
-        </motion.div>
+        </div>
       </div>
+      </RevealOnScroll>
 
+      <RevealOnScroll>
       <div className="max-w-3xl mx-auto px-4 py-15">
-            <div className="text-4xl md:text-7xl font-bold mb-9 text-center ">What I Do</div>
-            <div className="grid grid-cols-1 md:grid-cols-3  justify-center items-center gap-4">
-              {services.map((service, index) => (
-              <div key={index} className="p-6 h-[200px] md:h-[300px] bg-white dark:bg-gray-900 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-700 dark:text-gray-300">{service.description}</p>
-              </div>
-              ))}
+        <div className="text-4xl md:text-7xl font-bold mb-9 text-center ">
+          What I Do
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3  justify-center items-center gap-4">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="p-6 h-[180px] md:h-[300px] dark:bg-[#262626] bg-[#fafafa] dark:text-[#f3f3f3] text-[#0a0a0a] rounded-lg shadow-md"
+            >
+              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+              <p className="text-gray-700 dark:text-gray-300">
+                {service.description}
+              </p>
             </div>
-            
-          </div>
-
+          ))}
+        </div>
+      </div>
+      </RevealOnScroll>
     </section>
   );
 };
