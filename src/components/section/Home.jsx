@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 import RevealOnScroll from "../RevealOnScroll";
 import { FileText, MessageSquareText } from 'lucide-react';
+import Resume from "../assets/AugustineM.Angeles-CV.pdf";
 
 
 const greetings = [
@@ -94,7 +95,7 @@ export const Home = () => {
             className="flex justify-center space-x-4"
           >
             <a
-              href="#"
+              href={Resume} download="Augustine M. Angeles - CV.pdf"
               className="flex bg-blue-600 text-white py-4 px-15 rounded-4xl font-bold transition relative overflow-hidden shadow hover:-translate-y-0.5 hover:bg-blue-500"
             >
             <FileText />

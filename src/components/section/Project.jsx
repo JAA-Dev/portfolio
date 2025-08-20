@@ -1,6 +1,8 @@
 import React from "react";
 import ProfileImg from "../assets/blank-profile-picture.webp";
 import Nutri from "../assets/nutritrack.png";
+import Pure from "../assets/puremeds.png";
+import Nova from "../assets/novatime.png";
 import RevealOnScroll from "../RevealOnScroll";
 import { ExternalLink, Github } from "lucide-react";
 import PhpLogo from "../logos/icons8-php-24.png";
@@ -35,7 +37,7 @@ export const Project = () => {
                   <a href="https://nutritrackbustos.com/" target="_blank">
                     <ExternalLink size={20} />
                   </a>
-                  <a href="#">
+                  <a href="https://github.com/JAA-Dev/NutriTrack" target="_blank">
                     <Github size={20} />
                   </a>
                 </div>
@@ -65,21 +67,22 @@ export const Project = () => {
             </div>
             <div className="glass">
               <img
-                src={ProfileImg}
+                src={Nova}
                 alt="Project"
                 className="w-[400px] md:w-[700px] h-[250px] object-cover rounded-md"
               />
               <div>
                 <div className="text-xl font-bold mb-2 flex gap-3">
-                  <h3>Watch</h3>
-                  <a href="#">
+                  <h3>Nova Time</h3>
+                  <a href="https://github.com/JAA-Dev/Nova_Time" target="_blank">
                     <Github size={20} />
                   </a>
                 </div>
                 <p className="mb-4 p-second">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
-                  dolore fuga, debitis odit, nam et architecto laborum quibusdam
-                  voluptatem possimus.
+                  Nova Timet is a modern e-commerce platform for selling watches.
+                   It features product filtering, real-time stock display, and a smooth checkout process.
+                    Built with XML and jQuery, the system offers user-friendly navigation for customers and
+                     a simple dashboard for admins to manage inventory and orders.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[PhpLogo, JsLogo, BootLogo, MySqlLogo].map((tech, key) => (
@@ -96,21 +99,21 @@ export const Project = () => {
 
             <div className="glass">
               <img
-                src={ProfileImg}
+                src={Pure}
                 alt="Project"
                 className="w-[400px] md:w-[700px] h-[250px] object-cover rounded-md"
               />
               <div>
                 <div className="text-xl font-bold mb-2 flex gap-3">
                   <h3>PureMeds Pharmacy</h3>
-                  <a href="#">
+                  <a href="https://github.com/JAA-Dev/Java_POS" target="_blank">
                     <Github size={20} />
                   </a>
                 </div>
                 <p className="mb-4 p-second">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
-                  dolore fuga, debitis odit, nam et architecto laborum quibusdam
-                  voluptatem possimus.
+                  PureMeds POS is a user-friendly Point of Sale system for pharmacies.
+                   It enables staff to manage inventory, record sales, and generate receipts with ease.
+                    With its clean interface, it streamlines operations and ensures accurate transaction tracking.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[JavaLogo, MySqlLogo].map((tech, key) => (

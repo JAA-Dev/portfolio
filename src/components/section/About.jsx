@@ -2,7 +2,7 @@ import React from "react";
 import ProfileImg from "../assets/blank-profile-picture.webp";
 import BsuLogo from "../assets/logos/bsu-logo.png";
 import CambaogLogo from "../assets/logos/cambaog1.jpg";
-import MyPhoto from "../assets/FRAME.JPG";
+import MyPhoto from "../assets/FRAME2.JPG";
 import ReactLogo from "../logos/icons8-react-80.png";
 import JSLogo from "../logos/icons8-javascript-80.png";
 import PHPLogo from "../logos/icons8-php-80.png";
@@ -82,7 +82,7 @@ export const About = () => {
             <img
               src={MyPhoto}
               alt="Profile"
-              className="w-100 h-100 md:w-800 md:h-80 "
+              className="w-100 h-100 md:w-800 md:h-90 "
             />
           </div>
           {/* <div className="rounded-xl p-8 border-white/10 border"> */}
